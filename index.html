@@ -15,16 +15,29 @@
         
     </div>
     <script>
-        const tasks =[];
+        const tasks =[
+            
+           
+        ];
 
        function loadTask(){
 
        }
        function addtask(){
+        const taskinputElement =document.getElementById("todo-input");
+        const task =taskinputElement.value;
+
+        if(!task){
+            alert("please Enter a Task")
+        }
+
+        tasks.push(task);
+        console.log(tasks);
+        taskinputElement.value="";
 
        }
        function deleteTask(){
-        
+
        }
     </script>
 
