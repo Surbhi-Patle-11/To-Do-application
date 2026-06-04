@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1 >To-DO-Application</h1>
-    <div>All TO-do</div> 
+    <div id="task-container">All TO-do</div> 
     <div class="task-input-conatainer">
         <input type="text" placeholder="Enter new Todo" id="todo-input">
         <button id="add-todo-btn" onclick="addtask()">Add Todo</button>
@@ -22,6 +22,14 @@
 
        function loadTask(){
 
+        localStorage.setItem('alltask',JSON.stringify(tasks));
+        const taskcontainer =document.getElementById("task-container");
+        taskcontainer.innerHTML = '';
+
+        for( i =0 ; i < tasks.length ; i++){
+            taskcontainer.innerHTML +=`<div>${tasks[i]}</div>`;
+        }
+
        }
        function addtask(){
         const taskinputElement =document.getElementById("todo-input");
@@ -32,6 +40,7 @@
         }
 
         tasks.push(task);
+        loadTask();
         console.log(tasks);
         taskinputElement.value="";
 
