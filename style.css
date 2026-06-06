@@ -84,4 +84,41 @@ h1::first-letter{
     font-weight: bold;
 }
 
+@media  (max-width :600px) {
 
+    body{
+        background-color: antiquewhite;
+
+    }
+    .task-input-conatainer{
+       
+        
+      padding: 10px;
+        height: auto;
+    }
+    #todo-input{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    #add-todo-btn{
+        padding:10px ;
+        border-radius: 10px;
+        background-color: rgb(239, 180, 92);
+    }
+    .main-box{
+        display: flexbox;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+#task-container:has(.task-item){
+    width:60%;
+
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0,0.1);
+}
+        
+}
