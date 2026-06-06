@@ -112,9 +112,10 @@ h1::first-letter{
     }
     
 #task-container:has(.task-item){
-    width:100%;
+    width:90%;
+   box-sizing: border-box;
 
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 10px;
     background-color: rgb(185, 226, 223);
     border-radius: 20px;
@@ -123,12 +124,16 @@ h1::first-letter{
 }
 .task-item{
     display: flex;
+   box-sizing: border-box;
+
     padding: 10px 5px;
-   align-items: center;
+  justify-content: space-between;
+  align-items: center;
    border-bottom: 1px solid #353131;
    gap: 0px;
    justify-content: space-between;
    cursor: pointer;
+   word-wrap: break-word;
 }
         
 }
