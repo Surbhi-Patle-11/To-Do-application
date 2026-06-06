@@ -7,18 +7,32 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1 >To-DO-Application</h1>
-    <div id="task-container">All TO-do</div> 
+    <div class="main-box">
+        <h1 ><div class="text">To-DO</div>-Application</h1>
+    
     <div class="task-input-conatainer">
         <input type="text" placeholder="Enter new Todo" id="todo-input">
         <button id="add-todo-btn" onclick="addtask()">Add Todo</button>
         
+    </div>
+    <div id="task-container">All TO-do</div>
     </div>
     <script>
         const tasks =[
             
            
         ];
+
+       function localfromLocalstorage(){
+        const savedtask =JSON.parse(localStorage.getItem('alltask'));
+        if(savedtask){
+            tasks.push(...savedtask)
+        }
+
+loadTask();
+       }
+
+        localfromLocalstorage();
 
        function loadTask(){
 
@@ -27,7 +41,7 @@
         taskcontainer.innerHTML = '';
 
         for( i =0 ; i < tasks.length ; i++){
-            taskcontainer.innerHTML +=`<div>${tasks[i]}</div>`;
+            taskcontainer.innerHTML +=`<div class="tastd">${tasks[i]}<img src="../images/dlt-icon.png" height="20px" onclick="deletetask()"></div>`;
         }
 
        }
@@ -45,7 +59,12 @@
         taskinputElement.value="";
 
        }
-       function deleteTask(){
+        function deletetask(index) {
+
+            tasks.splice(index,1);
+            loadTask();
+
+
 
        }
     </script>

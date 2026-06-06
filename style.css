@@ -1,4 +1,59 @@
 
 .task-input-conatainer{
-    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: rgb(76, 60, 132);
+    height: 50px;
+    padding: 10px;
+    
+    
+   
+    
 }
+.taskd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.text{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 40px;
+    color: purple;
+}
+#todo-input{
+    padding: 15px;
+    border-radius: 30px;
+   width: 400px;
+   margin-right: 15px;
+   border: 1px solid black;
+}
+
+#add-todo-btn{
+
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background-color: #2ecc71;
+    
+}
+.add-todo-btn:hover{
+
+background-color:#66d735;
+}
+
+body{
+    background-color: rgb(231, 237, 235);
+}
+.main-box{
+    text-align: center;
+}
+h1::first-letter{
+    font-size: 40px;
+    color: purple;
+    font-weight: bold;
+}
+
+
