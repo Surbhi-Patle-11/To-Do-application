@@ -15,7 +15,7 @@
         <button id="add-todo-btn" onclick="addtask()">Add Todo</button>
         
     </div>
-    <div id="task-container">All TO-do</div>
+    <div id="task-container" >All TO-do</div>
     </div>
     <script>
         const tasks =[
@@ -41,7 +41,7 @@ loadTask();
         taskcontainer.innerHTML = '';
 
         for( i =0 ; i < tasks.length ; i++){
-            taskcontainer.innerHTML +=`<div class="tastd">${tasks[i]}<img src="../images/dlt-icon.png" height="20px" onclick="deletetask()"></div>`;
+            taskcontainer.innerHTML +=`<div  class="task-item"><input type="checkbox" class="checkbox" id="lo-${i}"><label for="lo-${i}">${tasks[i]}</label><img src="../images/dlt-icon.png" height="15px" onclick="deletetask()"></div>`;
         }
 
        }
