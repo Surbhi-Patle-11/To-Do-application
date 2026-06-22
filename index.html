@@ -41,7 +41,7 @@ loadTask();
         taskcontainer.innerHTML = '';
 
         for( i =0 ; i < tasks.length ; i++){
-            taskcontainer.innerHTML +=`<div  class="task-item"><input type="checkbox" class="checkbox" id="lo-${i}"><label for="lo-${i}" class="ox">${tasks[i]}</label><img src="./images/dlt-icon.png" height="15px" onclick="deletetask()"></div>`;
+            taskcontainer.innerHTML +=`<div  class="task-item" class="text-1"><input type="checkbox" class="checkbox"  id="lo-${i}"><label for="lo-${i}" class="ox">${tasks[i]}</label><img src="./images/dlt-icon.png" height="25px" onclick="deletetask()"></div>`;
         }
 
        }

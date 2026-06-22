@@ -17,17 +17,22 @@
 }
 .checkbox{
     cursor: pointer;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 50%;
+    height: 45px;
+    
 }
 #task-container:has(.task-item){
     width:500px;
 
     margin: 20px auto;
-    padding: 20px;
-    background-color: white;
+    padding: 50px;
+   background: #74e1e3;
+background: linear-gradient(0deg, rgba(116, 225, 227, 1) 0%, rgba(138, 219, 198, 1) 16%, rgba(253, 187, 45, 1) 100%);
+   font-size: 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0,0.1);
+    font-weight: 88px;
 }
 .task-item:last-child{
     border-bottom: none;
@@ -71,9 +76,18 @@
 
 background-color:#66d735;
 }
+.h1{
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(90deg,#8b5cf6,#ec4899);
+    -webkit-background-clip:text;
+    color: transparent;
+}
 
 body{
-    background-color: rgb(231, 237, 235);
+    
+    background: #b82a67;
+background: radial-gradient(circle, rgb(170, 89, 124) 0%, rgba(148, 187, 233, 1) 100%);
 }
 .main-box{
     text-align: center;
@@ -87,7 +101,9 @@ h1::first-letter{
 @media  (max-width :600px) {
 
     body{
-        background-color: antiquewhite;
+       
+        background: #9cb5b6;
+background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 
     }
     .task-input-conatainer{
@@ -99,11 +115,13 @@ h1::first-letter{
     #todo-input{
         width: 50%;
         margin-bottom: 10px;
+        background: #f8fafc;
     }
     #add-todo-btn{
         padding:10px ;
-        border-radius: 10px;
-        background-color: rgb(239, 180, 92);
+        border-radius: 15px;
+        background:linear-gradient(135deg,#8b5cf6,#ec4899);
+        color: white;
     }
     .main-box{
         display: flexbox;
@@ -115,17 +133,17 @@ h1::first-letter{
     width:90%;
    box-sizing: border-box;
 
-    margin: 0 auto;
+    margin: 10 auto;
+    
     padding: 10px;
-    background-color: rgb(185, 226, 223);
+    background-color:white;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0,0.1);
+    box-shadow: 0px 15px 40px rgba(0,0,0,0,0.08);
    
 }
 .task-item{
     display: flex;
-   box-sizing: border-box;
-
+  max-width: 100%;
     padding: 10px 5px;
   justify-content: space-between;
   align-items: center;
@@ -133,7 +151,16 @@ h1::first-letter{
    gap: 0px;
    justify-content: space-between;
    cursor: pointer;
-   word-wrap: break-word;
+   overflow-wrap: break-word;
+   
+   
+}
+.h1{
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(90deg,#8b5cf6,#ec4899);
+    -webkit-background-clip:text;
+    color: transparent;
 }
         
 }
